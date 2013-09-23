@@ -1,46 +1,138 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://ignite.where2stageit.com/" />
-<title>logout</title>
-</head>
-<body>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">logout</td></tr>
-</thead><tbody>
-<tr>
-	<td>open</td>
-	<td>/login.html</td>
-	<td></td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=loginid</td>
-	<td>qa_tester</td>
-</tr>
-<tr>
-	<td>sendKeys</td>
-	<td>id=password</td>
-	<td>Where2getit!</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=submit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>4000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=logout-button</td>
-	<td></td>
-</tr>
-</tbody></table>
-</body>
-</html>
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://ignite.where2stageit.com/login.html"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "loginid"
+      },
+      "text": "qa_tester"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "password"
+      },
+      "text": "Where2getit!"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "submit"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "img[alt=\"Reputation\"]"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Google+ Local"
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Yelp"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "id",
+        "value": ""
+      },
+      "text": "Yahoo Local"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "id",
+        "value": ""
+      },
+      "text": "Foursquare"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "id",
+        "value": ""
+      },
+      "text": "Facebook"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Reviewer"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Location Name"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "City & State"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Review"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Rating"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Review Date"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "We did not find any review data"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Next 25"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Last 25"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "id",
+        "value": ""
+      },
+      "text": "Show 25 50 100 results per page"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Back to Launchpad"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "logout-button"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Back to Log In"
+      }
+    }
+  ]
+}
