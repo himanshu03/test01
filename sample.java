@@ -51,41 +51,8 @@
         "value": "btn-select-account"
       }
     },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "id",
-        "value": "date-range"
-      }
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "css selector",
-        "value": "a.datepickerGoPrev > span"
-      }
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "css selector",
-        "value": "td.datepickerPast.datepickerSaturday > a > span"
-      }
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "xpath",
-        "value": "//div[@class='datepickerContainer']/table/tbody/tr/td[5]/table/tbody[2]/tr[5]/td[7]/a/span"
-      }
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "css selector",
-        "value": "input.datepickerApply.GrayButton"
-      }
-    },
+    
+    
     {
       "type": "verifyTextPresent",
       "text": "Total Channel Performance Across TimeDate Range: 06/01/2013 - 08/31/2013"
